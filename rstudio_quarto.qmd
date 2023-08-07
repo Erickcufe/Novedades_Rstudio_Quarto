@@ -1,0 +1,5 @@
+---
+title: "Novedades RStudio. Quarto"
+format: revealjs
+editor: visual
+---
