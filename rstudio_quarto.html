@@ -10,6 +10,7 @@
 <link href="rstudio_quarto_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.353">
 
+  <meta name="dcterms.date" content="2023-08-09">
   <title>Novedades RStudio. Quarto</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -28,11 +29,78 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="rstudio_quarto_files/libs/revealjs/dist/theme/quarto.css">
   <link href="rstudio_quarto_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="rstudio_quarto_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="rstudio_quarto_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="rstudio_quarto_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="rstudio_quarto_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="rstudio_quarto_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -329,11 +397,698 @@
 <div class="quarto-title-authors">
 </div>
 
+  <p class="date">2023-08-09</p>
 </section>
-<section class="slide level2">
+<section id="novedades-rstudio-quarto" class="slide level2">
+<h2>Novedades RStudio: Quarto</h2>
+<p><strong>BIENVENIDOS</strong></p>
+<p>Presenta: Erick Cuevas Fernández</p>
+<p><img data-src="img/xolo.png" class="absolute" style="bottom: 0px; right: 0px; width: 300px; height: 300px; "></p>
+<p><img data-src="img/bioconductor.png" class="absolute" style="left: 0px; bottom: 0px; width: 300px; height: 100px; "></p>
+<p><img data-src="img/nnb.png" class="absolute" style="left: 400px; bottom: 0px; width: 300px; height: 100px; "></p>
+<p><img data-src="img/rmb.png" class="absolute" style="top: 400px; left: 400px; width: 300px; height: 100px; "></p>
+<p><img data-src="img/avatar.png" class="absolute" style="top: 400px; left: 0px; width: 100px; height: 100px; "></p>
+<p><img data-src="img/ccg.png" class="absolute" style="top: 400px; left: 200px; width: 80px; height: 80px; "></p>
+</section>
+<section id="por-qué-quarto" class="slide level2 scrollable">
+<h2>¿Por qué Quarto?</h2>
+<ul>
+<li>Genera material interactivo utilizando Python, R, Julia y Observable.</li>
+<li>Difunde artículos, presentaciones, páginas web, blogs y libros de calidad profesional y reproducibles en formatos como HTML, PDF, MS Word, ePub, entre otros.</li>
+<li>Difunde saberes e innovaciones a lo largo de la organización mediante la publicación en <a href="https://posit.co/products/enterprise/connect/">Posit Connect</a>, <a href="https://www.atlassian.com/es/software/confluence">Confluence</a> o otras plataformas de edición.</li>
+<li>Redacta usando el formato markdown de Pandoc, incorporando ecuaciones, menciones, enlaces internos, conjuntos de imágenes, destacados, estructuras complejas y otros elementos.</li>
+</ul>
+</section>
+<section id="vamos-solo-a-trabajar-directamente-en-rstudio" class="slide level2">
+<h2>Vamos solo a trabajar directamente en RStudio</h2>
+<p>Se irán colocando aqui las instrucciones para que sirvan de guía.</p>
+</section>
+<section id="html" class="slide level2">
+<h2>HTML</h2>
+<ol type="1">
+<li>Abre un archivo en RStudio de <strong>Quarto</strong>.</li>
+<li>Elije de output HTML.</li>
+<li>Cambia la pre visualizacion al <strong>Viewer</strong></li>
+</ol>
+</section>
+<section id="siguientes-pasos" class="slide level2">
+<h2>Siguientes pasos</h2>
+<p>¿Qué notas de diferente con respecto a RMarkdown?</p>
+<ul>
+<li>Genera un <strong>Chunk</strong> para cargar los datos de PBMC4K.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="co">#| label: load-data</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co">#| message: false</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">library</span>(BiocFileCache)</span>
+<span id="cb1-6"><a href="#cb1-6"></a>bfc <span class="ot">&lt;-</span> <span class="fu">BiocFileCache</span>()</span>
+<span id="cb1-7"><a href="#cb1-7"></a>raw.path <span class="ot">&lt;-</span> <span class="fu">bfcrpath</span>(bfc, <span class="fu">file.path</span>(</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="st">"http://cf.10xgenomics.com/samples"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="st">"cell-exp/2.1.0/pbmc4k/pbmc4k_raw_gene_bc_matrices.tar.gz"</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>))</span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="fu">untar</span>(raw.path, <span class="at">exdir =</span> <span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">"pbmc4k"</span>))</span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="fu">library</span>(DropletUtils)</span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="fu">library</span>(Matrix)</span>
+<span id="cb1-15"><a href="#cb1-15"></a>fname <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">"pbmc4k/raw_gene_bc_matrices/GRCh38"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16"></a>sce.pbmc <span class="ot">&lt;-</span> <span class="fu">read10xCounts</span>(fname, <span class="at">col.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="continua-en-tu-archivo-html" class="slide level2">
+<h2>Continua en tu archivo HTML</h2>
+<ol type="1">
+<li>Modifica el YAML para agregar en <strong>html:</strong> el flag <strong>code-link: true</strong>. ¿Qué es lo que sucede?</li>
+<li>Escribe texto para citar los datos utilizados de este <a href="https://doi.org/10.1038/ncomms14049">link</a>. ¿Cómo haríamos eso?</li>
+</ol>
+</section>
+<section id="siguiente-ejercicio" class="slide level2">
+<h2>Siguiente ejercicio</h2>
+<ul>
+<li>Escribe el siguiente <strong>chunk</strong>:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="co">#| label: gene-annotation</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co">#| message: false</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co">#| warning: false</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="fu">library</span>(scater)</span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="fu">rownames</span>(sce.pbmc) <span class="ot">&lt;-</span> <span class="fu">uniquifyFeatureNames</span>(</span>
+<span id="cb2-8"><a href="#cb2-8"></a>    <span class="fu">rowData</span>(sce.pbmc)<span class="sc">$</span>ID, <span class="fu">rowData</span>(sce.pbmc)<span class="sc">$</span>Symbol</span>
+<span id="cb2-9"><a href="#cb2-9"></a>)</span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="fu">library</span>(EnsDb.Hsapiens.v86)</span>
+<span id="cb2-11"><a href="#cb2-11"></a>location <span class="ot">&lt;-</span> <span class="fu">mapIds</span>(EnsDb.Hsapiens.v86,</span>
+<span id="cb2-12"><a href="#cb2-12"></a>    <span class="at">keys =</span> <span class="fu">rowData</span>(sce.pbmc)<span class="sc">$</span>ID,</span>
+<span id="cb2-13"><a href="#cb2-13"></a>    <span class="at">column =</span> <span class="st">"SEQNAME"</span>, <span class="at">keytype =</span> <span class="st">"GENEID"</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>)</span>
+<span id="cb2-15"><a href="#cb2-15"></a></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="fu">set.seed</span>(<span class="dv">100</span>)</span>
+<span id="cb2-17"><a href="#cb2-17"></a>e.out <span class="ot">&lt;-</span> <span class="fu">emptyDrops</span>(<span class="fu">counts</span>(sce.pbmc))</span>
+<span id="cb2-18"><a href="#cb2-18"></a>sce.pbmc <span class="ot">&lt;-</span> sce.pbmc[, <span class="fu">which</span>(e.out<span class="sc">$</span>FDR <span class="sc">&lt;=</span> <span class="fl">0.001</span>)]</span>
+<span id="cb2-19"><a href="#cb2-19"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="nuestra-primera-tabla" class="slide level2">
+<h2>Nuestra primera tabla</h2>
+<ul>
+<li>Escribe en tu HTML: “<a href="#/nuestra-primera-tabla-output">Table&nbsp;1</a> es una tabla que nos muestra los outliers de las primeras 20 células”</li>
+</ul>
+<p>¿Cómo hacemos el hipervinculo de <a href="#/nuestra-primera-tabla-output">Table&nbsp;1</a>?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="co">#| label: tbl-p1</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="co">#| tbl-cap: Outliers de las primeras 20 células</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co">#| output-location: slide</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="fu">library</span>(gt)</span>
+<span id="cb3-8"><a href="#cb3-8"></a></span>
+<span id="cb3-9"><a href="#cb3-9"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(e.out[<span class="dv">1-20</span>])</span>
+<span id="cb3-10"><a href="#cb3-10"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb3-11"><a href="#cb3-11"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb3-14"><a href="#cb3-14"></a>    <span class="at">title =</span> <span class="st">"Outliers"</span>,</span>
+<span id="cb3-15"><a href="#cb3-15"></a>    <span class="at">subtitle =</span> <span class="st">"Outliers de las primeras 20 células"</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a>  )</span>
+<span id="cb3-17"><a href="#cb3-17"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
+</section>
+<section id="nuestra-primera-tabla-output" class="slide level2 output-location-slide"><h2>Nuestra primera tabla</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<div id="tbl-p1">
+
+<div id="hrlmcfjuah" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hrlmcfjuah table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#hrlmcfjuah thead, #hrlmcfjuah tbody, #hrlmcfjuah tfoot, #hrlmcfjuah tr, #hrlmcfjuah td, #hrlmcfjuah th {
+  border-style: none;
+}
+
+#hrlmcfjuah p {
+  margin: 0;
+  padding: 0;
+}
+
+#hrlmcfjuah .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#hrlmcfjuah .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#hrlmcfjuah .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#hrlmcfjuah .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#hrlmcfjuah .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hrlmcfjuah .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hrlmcfjuah .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hrlmcfjuah .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#hrlmcfjuah .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#hrlmcfjuah .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#hrlmcfjuah .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#hrlmcfjuah .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#hrlmcfjuah .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#hrlmcfjuah .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#hrlmcfjuah .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#hrlmcfjuah .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#hrlmcfjuah .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#hrlmcfjuah .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#hrlmcfjuah .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hrlmcfjuah .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#hrlmcfjuah .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#hrlmcfjuah .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#hrlmcfjuah .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hrlmcfjuah .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#hrlmcfjuah .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#hrlmcfjuah .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hrlmcfjuah .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hrlmcfjuah .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#hrlmcfjuah .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hrlmcfjuah .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#hrlmcfjuah .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hrlmcfjuah .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hrlmcfjuah .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hrlmcfjuah .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hrlmcfjuah .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hrlmcfjuah .gt_left {
+  text-align: left;
+}
+
+#hrlmcfjuah .gt_center {
+  text-align: center;
+}
+
+#hrlmcfjuah .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#hrlmcfjuah .gt_font_normal {
+  font-weight: normal;
+}
+
+#hrlmcfjuah .gt_font_bold {
+  font-weight: bold;
+}
+
+#hrlmcfjuah .gt_font_italic {
+  font-style: italic;
+}
+
+#hrlmcfjuah .gt_super {
+  font-size: 65%;
+}
+
+#hrlmcfjuah .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#hrlmcfjuah .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#hrlmcfjuah .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#hrlmcfjuah .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#hrlmcfjuah .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#hrlmcfjuah .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#hrlmcfjuah .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption>Table&nbsp;1:  <p>Outliers de las primeras 20 células</p> </caption>
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="5" class="gt_heading gt_title gt_font_normal" style="">Outliers</td>
+    </tr>
+    <tr class="gt_heading">
+      <td colspan="5" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="">Outliers de las primeras 20 células</td>
+    </tr>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Total">Total</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="LogProb">LogProb</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="PValue">PValue</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Limited">Limited</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="FDR">FDR</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Total" class="gt_row gt_right">1</td>
+<td headers="LogProb" class="gt_row gt_right">NA</td>
+<td headers="PValue" class="gt_row gt_right">NA</td>
+<td headers="Limited" class="gt_row gt_center">NA</td>
+<td headers="FDR" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="Total" class="gt_row gt_right">0</td>
+<td headers="LogProb" class="gt_row gt_right">NA</td>
+<td headers="PValue" class="gt_row gt_right">NA</td>
+<td headers="Limited" class="gt_row gt_center">NA</td>
+<td headers="FDR" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="Total" class="gt_row gt_right">1</td>
+<td headers="LogProb" class="gt_row gt_right">NA</td>
+<td headers="PValue" class="gt_row gt_right">NA</td>
+<td headers="Limited" class="gt_row gt_center">NA</td>
+<td headers="FDR" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="Total" class="gt_row gt_right">0</td>
+<td headers="LogProb" class="gt_row gt_right">NA</td>
+<td headers="PValue" class="gt_row gt_right">NA</td>
+<td headers="Limited" class="gt_row gt_center">NA</td>
+<td headers="FDR" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="Total" class="gt_row gt_right">1</td>
+<td headers="LogProb" class="gt_row gt_right">NA</td>
+<td headers="PValue" class="gt_row gt_right">NA</td>
+<td headers="Limited" class="gt_row gt_center">NA</td>
+<td headers="FDR" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="Total" class="gt_row gt_right">1</td>
+<td headers="LogProb" class="gt_row gt_right">NA</td>
+<td headers="PValue" class="gt_row gt_right">NA</td>
+<td headers="Limited" class="gt_row gt_center">NA</td>
+<td headers="FDR" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="Total" class="gt_row gt_right">0</td>
+<td headers="LogProb" class="gt_row gt_right">NA</td>
+<td headers="PValue" class="gt_row gt_right">NA</td>
+<td headers="Limited" class="gt_row gt_center">NA</td>
+<td headers="FDR" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="Total" class="gt_row gt_right">0</td>
+<td headers="LogProb" class="gt_row gt_right">NA</td>
+<td headers="PValue" class="gt_row gt_right">NA</td>
+<td headers="Limited" class="gt_row gt_center">NA</td>
+<td headers="FDR" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="Total" class="gt_row gt_right">0</td>
+<td headers="LogProb" class="gt_row gt_right">NA</td>
+<td headers="PValue" class="gt_row gt_right">NA</td>
+<td headers="Limited" class="gt_row gt_center">NA</td>
+<td headers="FDR" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="Total" class="gt_row gt_right">1</td>
+<td headers="LogProb" class="gt_row gt_right">NA</td>
+<td headers="PValue" class="gt_row gt_right">NA</td>
+<td headers="Limited" class="gt_row gt_center">NA</td>
+<td headers="FDR" class="gt_row gt_right">NA</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div></section><section id="nuestro-primer-plot" class="slide level2">
+<h2>Nuestro primer plot</h2>
+<p>Agrega el <strong>chunk</strong> y la lista a tu HTML y observa lo que sucede.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="co">#| label: fig-p1</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co">#| fig-cap: Tamaño de libreria</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">#| output-location: slide</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co">#| message: false</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="do">## Calculando el tamaño de las librerias</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a></span>
+<span id="cb4-9"><a href="#cb4-9"></a>lib.sf.pbmc <span class="ot">&lt;-</span> <span class="fu">librarySizeFactors</span>(sce.pbmc) <span class="co"># &lt;1&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a>ls.pbmc <span class="ot">&lt;-</span> <span class="fu">colSums</span>(<span class="fu">counts</span>(sce.pbmc)) <span class="co"># &lt;2&gt;</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="fu">plot</span>(ls.pbmc, lib.sf.pbmc, <span class="at">log=</span><span class="st">"xy"</span>, <span class="co"># &lt;3&gt;</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a>  <span class="at">xlab=</span><span class="st">"Library size"</span>, <span class="at">ylab=</span><span class="st">"Size factor"</span>) <span class="co"># &lt;3&gt;</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<ol type="1">
+<li>Estimar factores de normalización</li>
+<li>Calcular el tamaño de las librerias</li>
+<li>Plot</li>
+</ol>
+</section>
+<section id="nuestro-primer-plot-output" class="slide level2 output-location-slide"><h2>Nuestro primer plot</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<div id="fig-p1" class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="rstudio_quarto_files/figure-revealjs/fig-p1-1.png" width="960"></p>
+<figcaption>Figure&nbsp;1: Tamaño de libreria</figcaption>
+</figure>
+</div>
+</div>
+</div></section><section id="vamos-a-cambiar-a-presentacion" class="slide level2">
+<h2>Vamos a cambiar a presentacion</h2>
+<ul>
+<li>Cambia el YAML del output a <strong>revealsjs</strong></li>
+<li>Agrega <strong>chalkboard: true</strong></li>
+</ul>
+<p>¿Qué sucedió?</p>
+</section>
+<section id="artículos" class="slide level2">
+<h2>Artículos</h2>
+<p>Para esta sección vamos a ir a <a href="https://github.com/quarto-journals">quarto-journals</a>.</p>
+</section>
+<section id="el-fin" class="slide level2">
+<h2>El fin</h2>
+<p><strong>MUCHAS GRACIAS</strong></p>
+<p><img data-src="img/xolo.png" class="absolute" style="bottom: 0px; right: 0px; "></p>
+<p><img src="img/cdsb.png" class="slide-logo"></p>
 <div class="footer footer-default">
-
+<p>EBM 2023</p>
 </div>
 </section>
     </div>
@@ -346,6 +1101,7 @@
   <script src="rstudio_quarto_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="rstudio_quarto_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="rstudio_quarto_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="rstudio_quarto_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="rstudio_quarto_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -367,7 +1123,8 @@
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -538,7 +1295,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -547,6 +1304,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
