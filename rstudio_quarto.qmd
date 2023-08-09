@@ -152,16 +152,14 @@ plot(ls.pbmc, lib.sf.pbmc, log="xy", # <3>
 
 ## Vamos a cambiar a presentacion
 
-- Cambia el YAML del output a **revealsjs**
-- Agrega **chalkboard: true**
+-   Cambia el YAML del output a **revealsjs**
+-   Agrega **chalkboard: true**
 
 ¿Qué sucedió?
-
 
 ## Artículos
 
 Para esta sección vamos a ir a [quarto-journals](https://github.com/quarto-journals).
-
 
 ## El fin
 
